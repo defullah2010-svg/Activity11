@@ -489,7 +489,7 @@ function printPDF(btn){
   wrapper.style.backgroundPosition = 'center';
   wrapper.appendChild(content);
 
-  // ✅ إدراج الصور فقط (بدون إطار أو كلمة الشواهد) قبل رائدة النشاط ومديرة المدرسة
+  // ✅ إدراج الصور فقط (بدون إطار أو كلمة الشواهد) قبل رائد النشاط ومديرة المدرسة
   const tabImages = uploadedImages[tabId] || [];
   if (tabImages.length > 0) {
     const imagesWrapper = document.createElement('div');
@@ -508,9 +508,9 @@ function printPDF(btn){
       imagesWrapper.appendChild(img);
     });
 
-    // إدخاله قبل حقل رائدة النشاط ومديرة المدرسة
+    // إدخاله قبل حقل رائد النشاط ومديرة المدرسة
     const activityDiv = Array.from(content.querySelectorAll('div'))
-      .find(div => div.innerHTML.includes('رائدة النشاط'));
+      .find(div => div.innerHTML.includes('رائد النشاط'));
     if (activityDiv) {
       content.insertBefore(imagesWrapper, activityDiv);
     }
